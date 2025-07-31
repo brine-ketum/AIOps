@@ -1674,7 +1674,447 @@
             </div>
         </div>
 
-        <!-- Foreword -->
+        <!-- Chapter 0: Setting Up Your AIOps Lab Environment -->
+        <div class="chapter" id="chapter0">
+            <div class="chapter-header">
+                <div class="chapter-number">Chapter 0</div>
+                <h2 class="chapter-title">Setting Up Your AIOps Lab Environment</h2>
+            </div>
+            
+            <p class="chapter-intro">
+                Before diving into AI-Powered DevOps, let's build a complete lab environment where you can practice every concept in this book. This chapter ensures you have all the tools, accounts, and configurations needed for hands-on learning.
+            </p>
+            
+            <div class="section">
+                <h3 class="section-title">📋 Prerequisites Check</h3>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                    Let's ensure you have the minimum requirements before starting your AIOps journey.
+                </p>
+                
+                <div class="tools-showcase">
+                    <h4 class="subsection-title">System Requirements</h4>
+                    <ul style="font-size: 18px; line-height: 1.8; margin-left: 30px;">
+                        <li><strong>Operating System:</strong> 
+                            <ul style="margin-top: 10px;">
+                                <li>✅ Linux (Ubuntu 20.04+ recommended)</li>
+                                <li>✅ macOS 10.15+</li>
+                                <li>✅ Windows 10/11 with WSL2</li>
+                            </ul>
+                        </li>
+                        <li><strong>Hardware:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>CPU: 4+ cores (8 recommended)</li>
+                                <li>RAM: 8GB minimum (16GB recommended)</li>
+                                <li>Storage: 50GB free space</li>
+                                <li>Internet: Stable broadband connection</li>
+                            </ul>
+                        </li>
+                        <li><strong>Knowledge Prerequisites:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>Basic command line proficiency</li>
+                                <li>Understanding of Git version control</li>
+                                <li>Familiarity with at least one programming language</li>
+                                <li>Basic networking concepts</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🛠️ Essential Software Installation</h3>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Step 1: Install Core Development Tools</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Update your system (Ubuntu/Debian)
+sudo apt update && sudo apt upgrade -y
+
+# Install essential build tools
+sudo apt install -y build-essential curl wget git vim
+
+# Install Python 3.9+ and pip
+sudo apt install -y python3.9 python3-pip python3-venv
+
+# Install Node.js 18+ (for some AIOps tools)
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Verify installations
+python3 --version
+node --version
+git --version
+                    </pre>
+                </div>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Step 2: Install Docker & Kubernetes</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+# Install Minikube for local Kubernetes
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# Start Minikube
+minikube start --cpus=4 --memory=8192 --driver=docker
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">☁️ Cloud Account Setup</h3>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                    You'll need accounts with major cloud providers. Most offer free tiers perfect for learning.
+                </p>
+                
+                <div class="tools-showcase">
+                    <h4 class="subsection-title">Required Cloud Accounts</h4>
+                    <table style="width: 100%; font-size: 16px; margin: 20px 0;">
+                        <tr style="background: #f0f0f0;">
+                            <th style="padding: 15px;">Provider</th>
+                            <th style="padding: 15px;">Free Tier</th>
+                            <th style="padding: 15px;">Sign Up Link</th>
+                            <th style="padding: 15px;">What You'll Use</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;"><strong>AWS</strong></td>
+                            <td style="padding: 15px;">12 months + always free</td>
+                            <td style="padding: 15px;"><a href="https://aws.amazon.com/free/" target="_blank" style="color: #9333EA;">Create Account</a></td>
+                            <td style="padding: 15px;">SageMaker, Lambda, CloudWatch</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 15px;"><strong>Google Cloud</strong></td>
+                            <td style="padding: 15px;">$300 credit for 90 days</td>
+                            <td style="padding: 15px;"><a href="https://cloud.google.com/free" target="_blank" style="color: #9333EA;">Create Account</a></td>
+                            <td style="padding: 15px;">Vertex AI, Cloud Run, Monitoring</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;"><strong>Azure</strong></td>
+                            <td style="padding: 15px;">$200 credit for 30 days</td>
+                            <td style="padding: 15px;"><a href="https://azure.microsoft.com/free/" target="_blank" style="color: #9333EA;">Create Account</a></td>
+                            <td style="padding: 15px;">Azure ML, DevOps, Monitor</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 15px;"><strong>GitHub</strong></td>
+                            <td style="padding: 15px;">Free for public repos</td>
+                            <td style="padding: 15px;"><a href="https://github.com/join" target="_blank" style="color: #9333EA;">Create Account</a></td>
+                            <td style="padding: 15px;">Code repos, Actions, Copilot</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🤖 AI/ML Tools Installation</h3>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Install Python ML Libraries</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Create a virtual environment for the book projects
+python3 -m venv aiops-env
+source aiops-env/bin/activate  # On Windows: aiops-env\Scripts\activate
+
+# Install essential ML libraries
+pip install --upgrade pip
+pip install numpy pandas matplotlib seaborn
+pip install scikit-learn tensorflow torch
+pip install prophet statsmodels
+pip install jupyter notebook
+
+# Install AIOps specific libraries
+pip install prometheus-client elasticsearch
+pip install mlflow kubeflow
+pip install streamlit gradio
+
+# Save requirements for reproducibility
+pip freeze > requirements.txt
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🔧 DevOps Tools Setup</h3>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Install Essential DevOps Tools</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Install Terraform
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+# Install Ansible
+sudo apt install -y ansible
+
+# Install Helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+# Install Prometheus & Grafana using Docker Compose
+mkdir -p ~/aiops-lab/monitoring
+cd ~/aiops-lab/monitoring
+
+# Create docker-compose.yml for monitoring stack
+cat > docker-compose.yml << EOF
+version: '3.8'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  prometheus_data:
+  grafana_data:
+EOF
+
+# Create basic Prometheus config
+cat > prometheus.yml << EOF
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+EOF
+
+# Start monitoring stack
+docker-compose up -d
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🧪 Verify Your Lab Setup</h3>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Run Verification Script</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+#!/bin/bash
+# Save this as verify-setup.sh and run with: bash verify-setup.sh
+
+echo "🔍 Verifying AIOps Lab Setup..."
+echo "================================"
+
+# Check Python
+echo -n "✓ Python 3.9+: "
+python3 --version
+
+# Check Docker
+echo -n "✓ Docker: "
+docker --version
+
+# Check Kubernetes
+echo -n "✓ Kubernetes: "
+kubectl version --client --short
+
+# Check Terraform
+echo -n "✓ Terraform: "
+terraform version -json | jq -r '.terraform_version'
+
+# Check Git
+echo -n "✓ Git: "
+git --version
+
+# Check Node.js
+echo -n "✓ Node.js: "
+node --version
+
+# Test Docker
+echo -e "\n📦 Testing Docker..."
+docker run hello-world
+
+# Test Kubernetes
+echo -e "\n☸️ Testing Kubernetes..."
+kubectl get nodes
+
+# Check monitoring stack
+echo -e "\n📊 Checking Monitoring Stack..."
+curl -s http://localhost:9090/-/healthy && echo "✓ Prometheus is running"
+curl -s http://localhost:3000/api/health && echo "✓ Grafana is running"
+
+echo -e "\n✅ Lab setup verification complete!"
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">📚 Organizing Your Learning Environment</h3>
+                
+                <div class="tools-showcase">
+                    <h4 class="subsection-title">Recommended Project Structure</h4>
+                    <pre style="background: #f8f9fa; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace;">
+~/aiops-lab/
+├── projects/
+│   ├── chapter-02-ml-basics/
+│   ├── chapter-03-automation/
+│   ├── chapter-04-predictive/
+│   └── final-project/
+├── datasets/
+│   ├── logs/
+│   ├── metrics/
+│   └── sample-data/
+├── models/
+│   ├── anomaly-detection/
+│   ├── forecasting/
+│   └── classification/
+├── monitoring/
+│   ├── prometheus/
+│   ├── grafana/
+│   └── dashboards/
+├── scripts/
+│   ├── data-generators/
+│   ├── automation/
+│   └── utilities/
+└── notebooks/
+    ├── exploratory/
+    ├── experiments/
+    └── documentation/
+                    </pre>
+                </div>
+                
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <h4 style="color: #9333EA; margin-bottom: 15px;">Create the Project Structure</h4>
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Create the directory structure
+mkdir -p ~/aiops-lab/{projects,datasets,models,monitoring,scripts,notebooks}
+mkdir -p ~/aiops-lab/projects/{chapter-02-ml-basics,chapter-03-automation,chapter-04-predictive,final-project}
+mkdir -p ~/aiops-lab/datasets/{logs,metrics,sample-data}
+mkdir -p ~/aiops-lab/models/{anomaly-detection,forecasting,classification}
+mkdir -p ~/aiops-lab/monitoring/{prometheus,grafana,dashboards}
+mkdir -p ~/aiops-lab/scripts/{data-generators,automation,utilities}
+mkdir -p ~/aiops-lab/notebooks/{exploratory,experiments,documentation}
+
+# Initialize Git repository
+cd ~/aiops-lab
+git init
+echo "# AIOps Lab Projects" > README.md
+git add README.md
+git commit -m "Initial commit: AIOps lab setup"
+
+# Create a .gitignore file
+cat > .gitignore << EOF
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+*.csv
+*.json
+*.log
+datasets/
+
+# Models
+*.pkl
+*.h5
+*.pt
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
+
+git add .gitignore
+git commit -m "Add .gitignore"
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🚦 Ready to Start Learning!</h3>
+                
+                <div class="tools-showcase" style="background: linear-gradient(135deg, #9333EA, #7C3AED); color: white; padding: 40px; border-radius: 15px; text-align: center;">
+                    <h4 style="font-size: 24px; margin-bottom: 20px;">✅ Your AIOps Lab is Ready!</h4>
+                    <p style="font-size: 18px; margin-bottom: 20px;">
+                        You now have a complete learning environment with:
+                    </p>
+                    <ul style="list-style: none; font-size: 18px; line-height: 2;">
+                        <li>✓ All required software installed</li>
+                        <li>✓ Cloud accounts configured</li>
+                        <li>✓ Monitoring stack running</li>
+                        <li>✓ Project structure organized</li>
+                        <li>✓ ML libraries ready to use</li>
+                    </ul>
+                    <p style="font-size: 20px; margin-top: 30px; font-weight: bold;">
+                        Let's move on to Chapter 1 and begin your AIOps journey! 🚀
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">🆘 Troubleshooting Common Issues</h3>
+                
+                <div class="tools-showcase">
+                    <h4 class="subsection-title">Installation Problems</h4>
+                    <table style="width: 100%; font-size: 16px;">
+                        <tr style="background: #f0f0f0;">
+                            <th style="padding: 15px;">Issue</th>
+                            <th style="padding: 15px;">Solution</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;">Docker permission denied</td>
+                            <td style="padding: 15px;"><code>sudo usermod -aG docker $USER</code> then logout/login</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 15px;">Minikube won't start</td>
+                            <td style="padding: 15px;">Ensure virtualization is enabled in BIOS</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;">Python package conflicts</td>
+                            <td style="padding: 15px;">Always use virtual environments</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 15px;">Port already in use</td>
+                            <td style="padding: 15px;"><code>sudo lsof -i :PORT</code> to find process</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 1: DevOps Fundamentals for AI -->
         <div class="chapter" id="foreword">
             <div class="chapter-header">
                 <div class="chapter-number">Foreword</div>
@@ -3351,12 +3791,19 @@ print(f"Payback Period: {results['payback_months']:.1f} months")
             </div>
         </div>
 
-        <!-- Footer -->
+          <!-- Footer -->
         <div class="ebook-footer">
             <p class="copyright">© 2025 Brine Ketum. All rights reserved.</p>
             <p style="margin-top: 10px;">AI-Powered DevOps Mastery: The Complete AIOps Guide</p>
+            
+            
+            <!-- Copyright Notice -->
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; margin-top: 20px; border-radius: 10px; text-align: center; font-size: 16px;">
+                <p style="color: #9333EA; font-weight: bold;">
+                    This book is protected by copyright law prohibiting duplication or distribution without permission.
+                </p>
+            </div>
         </div>
-    </div>
 
     <script>
         function showTab(tabName) {
