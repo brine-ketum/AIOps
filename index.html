@@ -1824,379 +1824,6 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 6px;
         }
-
-        /* Chapter 11 style */
-
-               * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .chapter-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .chapter-number {
-            font-size: 18px;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-        
-        .chapter-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        .chapter-intro {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .lab-container {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-left: 5px solid #667eea;
-        }
-        
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        .lab-title {
-            font-size: 1.5rem;
-            color: #333;
-            font-weight: 600;
-        }
-        
-        .lab-controls {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .btn {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-        
-        .btn-primary {
-            background: #667eea;
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: #545b62;
-        }
-        
-        .btn-success {
-            background: #28a745;
-            color: white;
-        }
-        
-        .btn-success:hover {
-            background: #218838;
-        }
-        
-        .lab-content {
-            display: none;
-        }
-        
-        .lab-content.active {
-            display: block;
-        }
-        
-        .code-editor {
-            background: #1e1e1e;
-            color: #d4d4d4;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 14px;
-            overflow-x: auto;
-            margin: 20px 0;
-            position: relative;
-            border: 1px solid #333;
-        }
-        
-        .code-header {
-            display: flex;
-            justify-content: between;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #333;
-        }
-        
-        .code-title {
-            color: #569cd6;
-            font-weight: 600;
-        }
-        
-        .code-actions {
-            display: flex;
-            gap: 8px;
-            margin-left: auto;
-        }
-        
-        .copy-btn {
-            background: #007acc;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        
-        .copy-btn:hover {
-            background: #005a9e;
-        }
-        
-        .run-btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        
-        .run-btn:hover {
-            background: #1e7e34;
-        }
-        
-        .output-panel {
-            background: #0d1117;
-            color: #58a6ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 13px;
-            min-height: 100px;
-            border: 1px solid #30363d;
-        }
-        
-        .config-panel {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border: 1px solid #dee2e6;
-        }
-        
-        .config-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        
-        .config-item {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .config-label {
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #495057;
-        }
-        
-        .config-input {
-            padding: 8px 12px;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        
-        .tab-container {
-            margin: 20px 0;
-        }
-        
-        .tab-nav {
-            display: flex;
-            background: #f8f9fa;
-            border-radius: 8px 8px 0 0;
-            border: 1px solid #dee2e6;
-            border-bottom: none;
-        }
-        
-        .tab-btn {
-            padding: 12px 20px;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            font-weight: 500;
-            color: #6c757d;
-            transition: all 0.3s ease;
-        }
-        
-        .tab-btn.active {
-            background: #667eea;
-            color: white;
-        }
-        
-        .tab-btn:first-child {
-            border-radius: 8px 0 0 0;
-        }
-        
-        .tab-content {
-            display: none;
-            background: white;
-            border: 1px solid #dee2e6;
-            border-radius: 0 8px 8px 8px;
-            padding: 20px;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        .progress-bar {
-            background: #e9ecef;
-            height: 8px;
-            border-radius: 4px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-        
-        .info-box {
-            background: #e7f3ff;
-            border: 1px solid #b3d7ff;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-        
-        .info-box.warning {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-        }
-        
-        .info-box.success {
-            background: #d4edda;
-            border-color: #c3e6cb;
-        }
-        
-        .resource-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .resource-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid #e9ecef;
-            transition: transform 0.3s ease;
-        }
-        
-        .resource-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .resource-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        .resource-links {
-            list-style: none;
-        }
-        
-        .resource-links li {
-            margin: 8px 0;
-        }
-        
-        .resource-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .resource-links a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .chapter-title {
-                font-size: 2rem;
-            }
-            
-            .lab-header {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
-            }
-            
-            .config-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -2298,7 +1925,7 @@
                     <span class="toc-page-num">185</span>
                 </li>
                 <li class="toc-item">
-                    <a href="#chapter11">Chapter 11: Interactive Labs & Code Examples</a>
+                    <a href="#chapter11">Chapter 11: Hands-On Labs & Code Examples</a>
                     <span class="toc-dots"></span>
                     <span class="toc-page-num">231</span>
                 </li>
@@ -2905,7 +2532,7 @@ git commit -m "Add .gitignore"
                 <div class="tools-showcase" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe); border-left: 5px solid #6366f1;">
                     <ul style="font-size: 18px; line-height: 1.8; margin-left: 30px;">
                         <li><strong>Real-World Case Studies:</strong> Learn from Netflix, Google, JPMorgan Chase implementations</li>
-                        <li><strong>Hands-On Labs:</strong> 25+ practical exercises with working code examples</li>
+                        <li><strong>Hands-On Labs:</strong> practical exercises with working code examples</li>
                         <li><strong>Tool Comparisons:</strong> In-depth analysis of 10+ major AIOps platforms</li>
                         <li><strong>ROI Calculator:</strong> Working Python code to measure AIOps business impact</li>
                         <li><strong>Interview Prep:</strong> 50+ AIOps interview questions with detailed answers</li>
@@ -3841,470 +3468,201 @@ git commit -m "Add .gitignore"
             </div>
         </div>
 
-        <!-- Chapter 11: Hands-On Labs & Code Examples -->
-        <div class="chapter-header">
-            <div class="chapter-number">Chapter 11</div>
-            <h1 class="chapter-title">Interactive Labs & Code Examples</h1>
-            <p class="chapter-intro">
-                Experience hands-on learning with interactive, configurable labs. Each example includes real-time execution, customizable parameters, and progressive complexity levels.
-            </p>
-        </div>
-
-        <!-- Lab 1: Anomaly Detection -->
-        <div class="lab-container">
-            <div class="lab-header">
-                <h2 class="lab-title">🔍 Lab 1: Intelligent Anomaly Detection</h2>
-                <div class="lab-controls">
-                    <button class="btn btn-primary" onclick="toggleLab('lab1')">Toggle Lab</button>
-                    <button class="btn btn-secondary" onclick="resetLab('lab1')">Reset</button>
-                </div>
+         <!-- Chapter 11: Hands-On Labs & Code Examples -->
+        <div class="chapter" id="chapter11">
+            <div class="chapter-header">
+                <div class="chapter-number">Chapter 11</div>
+                <h2 class="chapter-title"> Hands-On Labs & Code Examples</h2>
             </div>
             
-            <div class="lab-content" id="lab1">
-                <div class="info-box">
-                    <strong>Learning Objectives:</strong> Implement isolation forest algorithm, visualize anomalies, and tune detection sensitivity in real-time.
-                </div>
-                
-                <div class="config-panel">
-                    <h4>Configuration Parameters</h4>
-                    <div class="config-grid">
-                        <div class="config-item">
-                            <label class="config-label">Contamination Rate</label>
-                            <input type="range" class="config-input" min="0.01" max="0.2" step="0.01" value="0.05" id="contamination">
-                            <span id="contamination-value">0.05</span>
-                        </div>
-                        <div class="config-item">
-                            <label class="config-label">Sample Size</label>
-                            <input type="range" class="config-input" min="500" max="2000" step="100" value="1000" id="sample-size">
-                            <span id="sample-size-value">1000</span>
-                        </div>
-                        <div class="config-item">
-                            <label class="config-label">Noise Level</label>
-                            <input type="range" class="config-input" min="1" max="20" step="1" value="10" id="noise-level">
-                            <span id="noise-level-value">10</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tab-container">
-                    <div class="tab-nav">
-                        <button class="tab-btn active" onclick="switchTab('code-tab-1', this)">Python Code</button>
-                        <button class="tab-btn" onclick="switchTab('config-tab-1', this)">Configuration</button>
-                        <button class="tab-btn" onclick="switchTab('output-tab-1', this)">Visualization</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="code-tab-1">
-                        <div class="code-editor">
-                            <div class="code-header">
-                                <span class="code-title">anomaly_detection.py</span>
-                                <div class="code-actions">
-                                    <button class="copy-btn" onclick="copyCode('code1')">Copy</button>
-                                    <button class="run-btn" onclick="simulateRun('lab1')">Run</button>
-                                </div>
-                            </div>
-                            <pre id="code1">import pandas as pd
+            <p class="chapter-intro">
+                Ready to get your hands dirty? These practical labs will transform you from theory to practice. Each lab includes working code you can run today.
+            </p>
+            
+            <div class="section">
+                <h3 class="section-title">🧪 Lab 1: Anomaly Detection for Metrics</h3>
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Anomaly Detection using Isolation Forest
+import pandas as pd
 import numpy as np
 from sklearn.ensemble import IsolationForest
 import matplotlib.pyplot as plt
-import seaborn as sns
-from datetime import datetime, timedelta
 
-class AnomalyDetector:
-    def __init__(self, contamination=0.05, random_state=42):
-        self.contamination = contamination
-        self.model = IsolationForest(
-            contamination=contamination, 
-            random_state=random_state,
-            n_estimators=100
-        )
-        self.is_fitted = False
-    
-    def generate_sample_data(self, n_normal=1000, n_anomalies=50):
-        """Generate realistic metric data with seasonal patterns"""
-        np.random.seed(42)
-        
-        # Normal traffic with daily patterns
-        times = np.arange(n_normal)
-        daily_pattern = 20 * np.sin(2 * np.pi * times / 144)  # 24h cycle
-        weekly_pattern = 10 * np.sin(2 * np.pi * times / 1008)  # 7d cycle
-        trend = 0.01 * times  # Slight upward trend
-        noise = np.random.normal(0, 5, n_normal)
-        
-        normal_values = 50 + daily_pattern + weekly_pattern + trend + noise
-        
-        # Inject anomalies
-        anomaly_indices = np.random.choice(n_normal, n_anomalies, replace=False)
-        anomaly_values = np.random.normal(90, 10, n_anomalies)
-        
-        # Create complete dataset
-        all_values = normal_values.copy()
-        all_values[anomaly_indices] = anomaly_values
-        
-        # Generate timestamps
-        start_time = datetime.now() - timedelta(minutes=len(all_values)*5)
-        timestamps = [start_time + timedelta(minutes=i*5) for i in range(len(all_values))]
-        
-        return pd.DataFrame({
-            'timestamp': timestamps,
-            'cpu_usage': all_values,
-            'is_true_anomaly': np.isin(range(len(all_values)), anomaly_indices)
-        })
-    
-    def fit_predict(self, data):
-        """Train model and predict anomalies"""
-        features = data[['cpu_usage']].values
-        predictions = self.model.fit_predict(features)
-        
-        # Convert to binary (1 = anomaly, 0 = normal)
-        anomaly_labels = (predictions == -1).astype(int)
-        
-        return anomaly_labels
-    
-    def calculate_metrics(self, true_labels, predicted_labels):
-        """Calculate detection performance metrics"""
-        from sklearn.metrics import precision_score, recall_score, f1_score
-        
-        precision = precision_score(true_labels, predicted_labels, zero_division=0)
-        recall = recall_score(true_labels, predicted_labels, zero_division=0)
-        f1 = f1_score(true_labels, predicted_labels, zero_division=0)
-        
-        return {
-            'precision': precision,
-            'recall': recall,
-            'f1_score': f1,
-            'total_anomalies_detected': predicted_labels.sum(),
-            'true_anomalies': true_labels.sum()
-        }
+# Generate sample metrics data
+np.random.seed(42)
+normal_cpu = np.random.normal(50, 10, 1000)
+anomaly_cpu = np.random.normal(90, 5, 50)
+cpu_usage = np.concatenate([normal_cpu, anomaly_cpu])
+timestamps = pd.date_range('2025-01-01', periods=1050, freq='5min')
 
-# Interactive execution
-detector = AnomalyDetector(contamination=0.05)
-data = detector.generate_sample_data()
-predicted_anomalies = detector.fit_predict(data)
+# Create DataFrame
+df = pd.DataFrame({'timestamp': timestamps, 'cpu_usage': cpu_usage})
 
-# Add predictions to dataframe
-data['predicted_anomaly'] = predicted_anomalies
+# Train Isolation Forest
+iso_forest = IsolationForest(contamination=0.05, random_state=42)
+df['anomaly'] = iso_forest.fit_predict(df[['cpu_usage']])
+df['anomaly'] = df['anomaly'].map({1: 0, -1: 1})
 
-# Calculate performance
-metrics = detector.calculate_metrics(
-    data['is_true_anomaly'].astype(int), 
-    predicted_anomalies
-)
+# Visualize results
+plt.figure(figsize=(12, 6))
+plt.scatter(df.index[df['anomaly']==0], 
+           df['cpu_usage'][df['anomaly']==0], 
+           c='blue', label='Normal', alpha=0.5)
+plt.scatter(df.index[df['anomaly']==1], 
+           df['cpu_usage'][df['anomaly']==1], 
+           c='red', label='Anomaly', s=100)
+plt.title('CPU Usage Anomaly Detection')
+plt.xlabel('Time')
+plt.ylabel('CPU Usage %')
+plt.legend()
+plt.show()
 
-print("Anomaly Detection Results:")
-print(f"Precision: {metrics['precision']:.3f}")
-print(f"Recall: {metrics['recall']:.3f}")
-print(f"F1-Score: {metrics['f1_score']:.3f}")
-print(f"Anomalies detected: {metrics['total_anomalies_detected']}")
-print(f"True anomalies: {metrics['true_anomalies']}")
-</pre>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="config-tab-1">
-                        <h4>Advanced Configuration Options</h4>
-                        <div class="config-grid">
-                            <div class="config-item">
-                                <label class="config-label">Algorithm Type</label>
-                                <select class="config-input">
-                                    <option>Isolation Forest</option>
-                                    <option>Local Outlier Factor</option>
-                                    <option>One-Class SVM</option>
-                                    <option>Elliptic Envelope</option>
-                                </select>
-                            </div>
-                            <div class="config-item">
-                                <label class="config-label">Feature Engineering</label>
-                                <select class="config-input">
-                                    <option>Raw Values</option>
-                                    <option>Rolling Statistics</option>
-                                    <option>Seasonal Decomposition</option>
-                                    <option>Fourier Features</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="info-box warning">
-                            <strong>Pro Tip:</strong> Start with Isolation Forest for general anomaly detection. Use LOF for density-based anomalies and One-Class SVM for high-dimensional data.
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="output-tab-1">
-                        <div class="output-panel" id="output1">
-                            Click "Run" to see the visualization and results...
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress1"></div>
-                        </div>
-                    </div>
+print(f"Anomalies detected: {df['anomaly'].sum()}")
+print(f"Anomaly timestamps: {df[df['anomaly']==1]['timestamp'].tolist()}")
+                    </pre>
                 </div>
-            </div>
-        </div>
-
-        <!-- Lab 2: NLP Log Analysis -->
-        <div class="lab-container">
-            <div class="lab-header">
-                <h2 class="lab-title">📝 Lab 2: Intelligent Log Analysis with NLP</h2>
-                <div class="lab-controls">
-                    <button class="btn btn-primary" onclick="toggleLab('lab2')">Toggle Lab</button>
-                    <button class="btn btn-secondary" onclick="resetLab('lab2')">Reset</button>
-                </div>
+                <p style="margin-top: 15px;">
+                    <strong>Try it:</strong> Copy this code to your Python environment or Jupyter notebook to run the anomaly detection example.
+                </p>
             </div>
             
-            <div class="lab-content" id="lab2">
-                <div class="info-box">
-                    <strong>Learning Objectives:</strong> Extract patterns from unstructured logs, classify log severity, and implement automated incident detection.
-                </div>
-                
-                <div class="tab-container">
-                    <div class="tab-nav">
-                        <button class="tab-btn active" onclick="switchTab('code-tab-2', this)">Python Code</button>
-                        <button class="tab-btn" onclick="switchTab('patterns-tab-2', this)">Pattern Analysis</button>
-                        <button class="tab-btn" onclick="switchTab('classification-tab-2', this)">Classification</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="code-tab-2">
-                        <div class="code-editor">
-                            <div class="code-header">
-                                <span class="code-title">log_analyzer.py</span>
-                                <div class="code-actions">
-                                    <button class="copy-btn" onclick="copyCode('code2')">Copy</button>
-                                    <button class="run-btn" onclick="simulateRun('lab2')">Run</button>
-                                </div>
-                            </div>
-                            <pre id="code2">import re
-import pandas as pd
-import numpy as np
-from collections import Counter, defaultdict
+            <div class="section">
+                <h3 class="section-title">🧪 Lab 2: Log Analysis with NLP</h3>
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Intelligent Log Analysis using NLP
+import re
+from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
-from sklearn.ensemble import RandomForestClassifier
-import nltk
-from datetime import datetime, timedelta
 
-class IntelligentLogAnalyzer:
-    def __init__(self):
-        self.vectorizer = TfidfVectorizer(
-            max_features=1000,
-            stop_words='english',
-            ngram_range=(1, 2)
-        )
-        self.classifier = RandomForestClassifier(n_estimators=100, random_state=42)
-        self.patterns = {}
-        
-    def preprocess_log(self, log_line):
-        """Extract structured information from log line"""
-        # Regex patterns for common log formats
-        patterns = {
-            'timestamp': r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}',
-            'level': r'(DEBUG|INFO|WARN|ERROR|FATAL)',
-            'ip': r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b',
-            'status_code': r'\b[1-5]\d{2}\b',
-            'response_time': r'\d+ms',
-            'user_id': r'user_\d+',
-            'session_id': r'session_[a-f0-9]+',
-        }
-        
-        extracted = {}
-        for field, pattern in patterns.items():
-            match = re.search(pattern, log_line)
-            extracted[field] = match.group(0) if match else None
-            
-        # Clean message (remove structured parts)
-        message = log_line
-        for field, value in extracted.items():
-            if value:
-                message = message.replace(value, f'<{field.upper()}>')
-                
-        extracted['cleaned_message'] = message.strip()
-        extracted['original'] = log_line
-        
-        return extracted
-    
-    def generate_sample_logs(self, n_logs=1000):
-        """Generate realistic log data for testing"""
-        log_templates = [
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} INFO user_{user_id} logged in from {ip}",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} ERROR Database connection failed: timeout after 30s",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} WARN Memory usage at {memory}% - threshold exceeded",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} ERROR API rate limit exceeded for user_{user_id}",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} INFO Payment processed: ${amount} for order_{order_id}",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} ERROR 404 Not Found: /api/v1/users/{user_id}",
-            "2025-01-{day:02d} {hour:02d}:{minute:02d}:{second:02d} DEBUG Cache hit for key: user_session_{session_id}",
-        ]
-        
-        logs = []
-        for i in range(n_logs):
-            template = np.random.choice(log_templates)
-            
-            # Generate random values
-            day = np.random.randint(1, 32)
-            hour = np.random.randint(0, 24)
-            minute = np.random.randint(0, 60)
-            second = np.random.randint(0, 60)
-            user_id = np.random.randint(1000, 9999)
-            ip = f"{np.random.randint(1,255)}.{np.random.randint(1,255)}.{np.random.randint(1,255)}.{np.random.randint(1,255)}"
-            memory = np.random.randint(70, 95)
-            amount = np.random.randint(10, 1000)
-            order_id = np.random.randint(10000, 99999)
-            session_id = f"{np.random.randint(100000, 999999):x}"
-            
-            log = template.format(
-                day=day, hour=hour, minute=minute, second=second,
-                user_id=user_id, ip=ip, memory=memory, amount=amount,
-                order_id=order_id, session_id=session_id
-            )
-            logs.append(log)
-            
-        return logs
-    
-    def analyze_patterns(self, logs):
-        """Extract and analyze log patterns"""
-        processed_logs = [self.preprocess_log(log) for log in logs]
-        
-        # Pattern frequency analysis
-        messages = [log['cleaned_message'] for log in processed_logs]
-        pattern_counts = Counter(messages)
-        
-        # Temporal analysis
-        temporal_patterns = defaultdict(list)
-        for log in processed_logs:
-            if log['timestamp']:
-                hour = int(log['timestamp'].split()[1].split(':')[0])
-                temporal_patterns[hour].append(log['level'])
-        
-        # Error correlation analysis
-        error_logs = [log for log in processed_logs if log['level'] == 'ERROR']
-        error_patterns = Counter([log['cleaned_message'] for log in error_logs])
-        
-        return {
-            'total_logs': len(logs),
-            'unique_patterns': len(pattern_counts),
-            'most_common_patterns': pattern_counts.most_common(10),
-            'error_patterns': error_patterns.most_common(5),
-            'temporal_distribution': dict(temporal_patterns),
-            'severity_distribution': Counter([log['level'] for log in processed_logs if log['level']])
-        }
-    
-    def cluster_similar_logs(self, logs, n_clusters=5):
-        """Group similar log messages using clustering"""
-        processed_logs = [self.preprocess_log(log) for log in logs]
-        messages = [log['cleaned_message'] for log in processed_logs]
-        
-        # Vectorize messages
-        tfidf_matrix = self.vectorizer.fit_transform(messages)
-        
-        # Perform clustering
-        kmeans = KMeans(n_clusters=n_clusters, random_state=42)
-        clusters = kmeans.fit_predict(tfidf_matrix)
-        
-        # Analyze clusters
-        cluster_info = {}
-        for i in range(n_clusters):
-            cluster_logs = [logs[j] for j in range(len(logs)) if clusters[j] == i]
-            cluster_messages = [messages[j] for j in range(len(messages)) if clusters[j] == i]
-            
-            cluster_info[i] = {
-                'size': len(cluster_logs),
-                'sample_logs': cluster_logs[:3],
-                'representative_message': Counter(cluster_messages).most_common(1)[0][0]
-            }
-        
-        return cluster_info
+# Sample log data
+logs = [
+    "2025-01-15 10:23:45 ERROR Database connection failed: timeout",
+    "2025-01-15 10:23:46 ERROR Database connection failed: timeout", 
+    "2025-01-15 10:24:01 INFO Service started successfully",
+    "2025-01-15 10:24:15 ERROR API rate limit exceeded",
+    "2025-01-15 10:24:16 ERROR API rate limit exceeded",
+    "2025-01-15 10:24:30 WARN Memory usage at 85%",
+    "2025-01-15 10:24:45 ERROR Database connection failed: timeout"
+]
 
-# Example usage
-analyzer = IntelligentLogAnalyzer()
+# Extract log patterns
+def extract_pattern(log):
+    # Remove timestamps and specific values
+    pattern = re.sub(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', '', log)
+    pattern = re.sub(r'\d+', 'NUM', pattern)
+    return pattern.strip()
 
-# Generate sample data
-sample_logs = analyzer.generate_sample_logs(500)
+patterns = [extract_pattern(log) for log in logs]
 
-# Analyze patterns
-pattern_analysis = analyzer.analyze_patterns(sample_logs)
-
-# Cluster similar logs
-cluster_analysis = analyzer.cluster_similar_logs(sample_logs)
-
-print("Log Analysis Results:")
-print(f"Total logs processed: {pattern_analysis['total_logs']}")
-print(f"Unique patterns found: {pattern_analysis['unique_patterns']}")
-print("\nMost common error patterns:")
-for pattern, count in pattern_analysis['error_patterns']:
+# Count similar patterns
+pattern_counts = Counter(patterns)
+print("Most common error patterns:")
+for pattern, count in pattern_counts.most_common(3):
     print(f"  {pattern}: {count} occurrences")
 
-print(f"\nLog clusters identified: {len(cluster_analysis)}")
-for cluster_id, info in cluster_analysis.items():
-    print(f"  Cluster {cluster_id}: {info['size']} logs")
-    print(f"    Representative: {info['representative_message'][:100]}...")
-</pre>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="patterns-tab-2">
-                        <div class="output-panel" id="patterns-output">
-                            Pattern analysis results will appear here after running the code...
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="classification-tab-2">
-                        <div class="info-box success">
-                            <strong>Advanced Features:</strong> Implement custom severity scoring, automated alerting rules, and real-time pattern detection.
-                        </div>
-                        <div class="output-panel" id="classification-output">
-                            Classification results will appear here...
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+# Cluster similar logs
+vectorizer = TfidfVectorizer(max_features=50)
+X = vectorizer.fit_transform(logs)
+kmeans = KMeans(n_clusters=3, random_state=42)
+clusters = kmeans.fit_predict(X)
 
-        <!-- Extended Resources Section -->
-        <div class="lab-container">
-            <h2 class="lab-title">📚 Complete Lab Ecosystem</h2>
+print("\nLog clusters:")
+for i in range(3):
+    print(f"\nCluster {i}:")
+    cluster_logs = [logs[j] for j in range(len(logs)) if clusters[j] == i]
+    for log in cluster_logs[:2]:  # Show first 2 logs per cluster
+        print(f"  {log}")
+                    </pre>
+                </div>
+            </div>
             
-            <div class="resource-grid">
-                <div class="resource-card">
-                    <h3 class="resource-title">🔍 Anomaly Detection Suite</h3>
-                    <ul class="resource-links">
-                        <li><a href="#" onclick="loadResource('prometheus-anomaly')">Prometheus + Machine Learning</a></li>
-                        <li><a href="#" onclick="loadResource('elastic-ml')">Elasticsearch ML Detection</a></li>
-                        <li><a href="#" onclick="loadResource('luminol-ts')">Time Series Analysis with Luminol</a></li>
-                        <li><a href="#" onclick="loadResource('twitter-anomaly')">Twitter's AnomalyDetection R</a></li>
-                        <li><a href="#" onclick="loadResource('yahoo-egads')">Yahoo EGADS Framework</a></li>
-                    </ul>
+            <div class="section">
+                <h3 class="section-title">🧪 Lab 3: Predictive Scaling with Prophet</h3>
+                <div class="tools-showcase" style="background: #1e1e1e; color: #fff; padding: 20px; border-radius: 10px;">
+                    <pre style="overflow-x: auto; font-family: 'Courier New', monospace;">
+# Predictive Auto-scaling using Facebook Prophet
+from prophet import Prophet
+import pandas as pd
+import numpy as np
+
+# Generate sample traffic data with daily and weekly patterns
+dates = pd.date_range('2024-01-01', '2025-01-15', freq='H')
+trend = np.linspace(100, 150, len(dates))
+daily_pattern = 10 * np.sin(2 * np.pi * dates.hour / 24)
+weekly_pattern = 5 * np.sin(2 * np.pi * dates.dayofweek / 7)
+noise = np.random.normal(0, 5, len(dates))
+traffic = trend + daily_pattern + weekly_pattern + noise
+
+# Prepare data for Prophet
+df = pd.DataFrame({
+    'ds': dates,
+    'y': traffic
+})
+
+# Train model
+model = Prophet(daily_seasonality=True, weekly_seasonality=True)
+model.fit(df)
+
+# Make predictions for next 7 days
+future = model.make_future_dataframe(periods=24*7, freq='H')
+forecast = model.predict(future)
+
+# Calculate required resources (simplified)
+def calculate_instances(traffic):
+    instances_per_1000_requests = 1
+    return np.ceil(traffic / 1000 * instances_per_1000_requests)
+
+forecast['instances_needed'] = calculate_instances(forecast['yhat'])
+
+# Show predictions
+print("Predicted resource needs for next 24 hours:")
+next_24h = forecast.tail(24)[['ds', 'yhat', 'instances_needed']]
+print(next_24h.head())
+
+# Identify peak times
+peak_hours = forecast.tail(168).nlargest(5, 'yhat')[['ds', 'yhat', 'instances_needed']]
+print("\nPeak traffic times in next week:")
+print(peak_hours)
+                    </pre>
                 </div>
-                
-                <div class="resource-card">
-                    <h3 class="resource-title">📈 Predictive Analytics</h3>
-                    <ul class="resource-links">
-                        <li><a href="#" onclick="loadResource('prophet-ts')">Facebook Prophet Forecasting</a></li>
-                        <li><a href="#" onclick="loadResource('gluonts-dl')">AWS GluonTS Deep Learning</a></li>
-                        <li><a href="#" onclick="loadResource('darts-multi')">Multi-Model Forecasting</a></li>
-                        <li><a href="#" onclick="loadResource('tsfresh-features')">Automated Feature Extraction</a></li>
-                        <li><a href="#" onclick="loadResource('merlion-unified')">Salesforce Merlion Platform</a></li>
-                    </ul>
-                </div>
-                
-                <div class="resource-card">
-                    <h3 class="resource-title">🤖 Intelligent Automation</h3>
-                    <ul class="resource-links">
-                        <li><a href="#" onclick="loadResource('ansible-ml')">ML-Driven Ansible Playbooks</a></li>
-                        <li><a href="#" onclick="loadResource('terraform-k8s')">Terraform + Kubernetes</a></li>
-                        <li><a href="#" onclick="loadResource('argo-workflows')">Argo Workflows ML Pipeline</a></li>
-                        <li><a href="#" onclick="loadResource('kubeflow-mlops')">Kubeflow MLOps Platform</a></li>
-                        <li><a href="#" onclick="loadResource('tekton-ml')">Tekton CI/CD with ML</a></li>
-                    </ul>
-                </div>
-                
-                <div class="resource-card">
-                    <h3 class="resource-title">🧠 Advanced Analytics</h3>
-                    <ul class="resource-links">
-                        <li><a href="#" onclick="loadResource('neuralprophet')">Neural Prophet Deep Learning</a></li>
-                        <li><a href="#" onclick="loadResource('automl-ts')">AutoML for Time Series</a></li>
-                        <li><a href="#" onclick="loadResource('river-online')">Online Machine Learning</a></li>
-                        <li><a href="#" onclick="loadResource('evidently-ml')">ML Model Monitoring</a></li>
-                        <li><a href="#" onclick="loadResource('great-expectations')">Data Quality Automation</a></li>
-                    </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">📚 Complete Lab Collection</h3>
+                <div class="tools-showcase">
+                    <h4 class="subsection-title">Anomaly Detection Labs</h4>
+                    <ol style="font-size: 16px; line-height: 1.8;">
+                        <li><a href="https://github.com/prometheus/prometheus/tree/main/documentation/examples" target="_blank" style="color: #9333EA;">Prometheus Anomaly Detection Setup</a></li>
+                        <li><a href="https://www.elastic.co/guide/en/machine-learning/current/ml-getting-started.html" target="_blank" style="color: #9333EA;">Elastic ML Anomaly Detection Tutorial</a></li>
+                        <li><a href="https://github.com/linkedin/luminol" target="_blank" style="color: #9333EA;">LinkedIn's Luminol Time Series Lab</a></li>
+                        <li><a href="https://github.com/twitter/AnomalyDetection" target="_blank" style="color: #9333EA;">Twitter's Anomaly Detection R Package</a></li>
+                        <li><a href="https://github.com/yahoo/EGADS" target="_blank" style="color: #9333EA;">Yahoo EGADS - Anomaly Detection System</a></li>
+                    </ol>
+                    
+                    <h4 class="subsection-title">Predictive Analytics Labs</h4>
+                    <ol style="font-size: 16px; line-height: 1.8;">
+                        <li><a href="https://facebook.github.io/prophet/docs/quick_start.html" target="_blank" style="color: #9333EA;">Prophet Time Series Forecasting</a></li>
+                        <li><a href="https://github.com/awslabs/gluonts" target="_blank" style="color: #9333EA;">AWS GluonTS Deep Learning Lab</a></li>
+                        <li><a href="https://github.com/unit8co/darts" target="_blank" style="color: #9333EA;">Darts Multi-Model Forecasting</a></li>
+                        <li><a href="https://github.com/blue-yonder/tsfresh" target="_blank" style="color: #9333EA;">Feature Extraction for Time Series</a></li>
+                        <li><a href="https://github.com/salesforce/Merlion" target="_blank" style="color: #9333EA;">Salesforce Merlion Lab</a></li>
+                    </ol>
+                    
+                    <h4 class="subsection-title">Intelligent Automation Labs</h4>
+                    <ol style="font-size: 16px; line-height: 1.8;">
+                        <li><a href="https://github.com/ansible/ansible-examples" target="_blank" style="color: #9333EA;">Ansible ML-Driven Playbooks</a></li>
+                        <li><a href="https://github.com/hashicorp/terraform-provider-kubernetes" target="_blank" style="color: #9333EA;">Terraform + K8s Automation</a></li>
+                        <li><a href="https://github.com/argoproj/argo-workflows" target="_blank" style="color: #9333EA;">Argo Workflows ML Pipeline</a></li>
+                        <li><a href="https://github.com/kubeflow/pipelines" target="_blank" style="color: #9333EA;">Kubeflow MLOps Pipelines</a></li>
+                        <li><a href="https://github.com/tektoncd/pipeline" target="_blank" style="color: #9333EA;">Tekton CI/CD with ML</a></li>
+                    </ol>
                 </div>
             </div>
         </div>
+    
         <!-- Chapter 12: AIOps Tools Comparison -->
         <div class="chapter" id="chapter12">
             <div class="chapter-header">
@@ -5544,602 +4902,6 @@ for cluster_id, info in cluster_analysis.items():
                     calculator.style.gridTemplateColumns = '1fr 1fr';
                 }
             }
-        });
-
-       Hands for chapter 11
-        let labState = {
-            lab1: {
-                contamination: 0.05,
-                sampleSize: 1000,
-                noiseLevel: 10,
-                algorithm: 'isolation_forest',
-                isRunning: false,
-                results: null
-            },
-            lab2: {
-                logCount: 500,
-                algorithm: 'tfidf',
-                clusters: 5,
-                isRunning: false,
-                results: null
-            }
-        };
-
-        // Real data generation functions
-        function generateAnomalyData(sampleSize, contamination, noiseLevel) {
-            const normal = [];
-            const anomalies = [];
-            const timestamps = [];
-            
-            // Generate normal data with patterns
-            for (let i = 0; i < sampleSize; i++) {
-                const time = i * 5; // 5-minute intervals
-                const dailyPattern = 20 * Math.sin(2 * Math.PI * (time % 1440) / 1440);
-                const weeklyPattern = 10 * Math.sin(2 * Math.PI * (time % 10080) / 10080);
-                const noise = (Math.random() - 0.5) * noiseLevel;
-                const value = 50 + dailyPattern + weeklyPattern + noise;
-                
-                normal.push(value);
-                timestamps.push(new Date(Date.now() - (sampleSize - i) * 5 * 60000));
-            }
-            
-            // Inject anomalies
-            const numAnomalies = Math.floor(sampleSize * contamination);
-            const anomalyIndices = new Set();
-            
-            while (anomalyIndices.size < numAnomalies) {
-                anomalyIndices.add(Math.floor(Math.random() * sampleSize));
-            }
-            
-            anomalyIndices.forEach(idx => {
-                normal[idx] = 80 + Math.random() * 20; // High anomalous values
-                anomalies.push(idx);
-            });
-            
-            return { values: normal, anomalyIndices: Array.from(anomalyIndices), timestamps };
-        }
-
-        function generateLogData(count) {
-            const templates = [
-                "INFO user_{userId} logged in from {ip}",
-                "ERROR Database connection failed: timeout after 30s",
-                "WARN Memory usage at {memory}% - threshold exceeded",
-                "ERROR API rate limit exceeded for user_{userId}",
-                "INFO Payment processed: ${amount} for order_{orderId}",
-                "ERROR 404 Not Found: /api/v1/users/{userId}",
-                "DEBUG Cache hit for key: user_session_{sessionId}",
-                "ERROR SSL certificate expired for domain {domain}",
-                "INFO Backup completed successfully - {size}GB",
-                "WARN High CPU usage detected: {cpu}%"
-            ];
-            
-            const logs = [];
-            const now = new Date();
-            
-            for (let i = 0; i < count; i++) {
-                const template = templates[Math.floor(Math.random() * templates.length)];
-                const timestamp = new Date(now.getTime() - (count - i) * 60000);
-                
-                let log = timestamp.toISOString().slice(0, 19).replace('T', ' ') + ' ' + template;
-                
-                // Replace placeholders
-                log = log.replace('{userId}', Math.floor(Math.random() * 9999) + 1000);
-                log = log.replace('{ip}', `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`);
-                log = log.replace('{memory}', Math.floor(Math.random() * 25) + 70);
-                log = log.replace('{amount}', Math.floor(Math.random() * 1000) + 10);
-                log = log.replace('{orderId}', Math.floor(Math.random() * 90000) + 10000);
-                log = log.replace('{sessionId}', Math.random().toString(36).substr(2, 8));
-                log = log.replace('{domain}', ['api.example.com', 'cdn.example.com', 'auth.example.com'][Math.floor(Math.random() * 3)]);
-                log = log.replace('{size}', (Math.random() * 50 + 10).toFixed(1));
-                log = log.replace('{cpu}', Math.floor(Math.random() * 30) + 70);
-                
-                logs.push(log);
-            }
-            
-            return logs;
-        }
-
-        // Anomaly detection algorithm
-        function isolationForestDetection(data, contamination) {
-            const threshold = data.sort((a, b) => b - a)[Math.floor(data.length * contamination)];
-            return data.map(value => value >= threshold ? 1 : 0);
-        }
-
-        // Log analysis functions
-        function extractLogPatterns(logs) {
-            const patterns = {};
-            const severityCounts = { INFO: 0, WARN: 0, ERROR: 0, DEBUG: 0 };
-            const errorPatterns = {};
-            
-            logs.forEach(log => {
-                // Extract severity
-                const severityMatch = log.match(/(INFO|WARN|ERROR|DEBUG)/);
-                if (severityMatch) {
-                    severityCounts[severityMatch[1]]++;
-                }
-                
-                // Extract pattern (remove timestamps and specific values)
-                let pattern = log.replace(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/, 'TIMESTAMP');
-                pattern = pattern.replace(/\d+/g, 'NUM');
-                pattern = pattern.replace(/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/g, 'IP');
-                
-                patterns[pattern] = (patterns[pattern] || 0) + 1;
-                
-                // Track error patterns specifically
-                if (log.includes('ERROR')) {
-                    const errorMsg = log.split('ERROR ')[1] || log;
-                    const cleanError = errorMsg.replace(/\d+/g, 'NUM').replace(/user_\d+/g, 'USER');
-                    errorPatterns[cleanError] = (errorPatterns[cleanError] || 0) + 1;
-                }
-            });
-            
-            return { patterns, severityCounts, errorPatterns };
-        }
-
-        function clusterLogs(logs, numClusters) {
-            // Simple clustering based on log message similarity
-            const clusters = Array(numClusters).fill().map(() => []);
-            
-            logs.forEach((log, index) => {
-                // Simple hash-based clustering for demonstration
-                const cleanLog = log.replace(/\d+/g, '').replace(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/, '');
-                const hash = cleanLog.split('').reduce((a, b) => ((a << 5) - a + b.charCodeAt(0)) & 0xffffffff, 0);
-                const clusterIndex = Math.abs(hash) % numClusters;
-                clusters[clusterIndex].push({ index, log, cleanLog });
-            });
-            
-            return clusters.map((cluster, idx) => ({
-                id: idx,
-                size: cluster.length,
-                samples: cluster.slice(0, 3).map(item => item.log),
-                representative: cluster.length > 0 ? cluster[0].cleanLog : ''
-            }));
-        }
-
-        // Enhanced button functions
-        function toggleLab(labId) {
-            const labContent = document.getElementById(labId);
-            const isActive = labContent.classList.contains('active');
-            
-            labContent.classList.toggle('active');
-            
-            // Update button text
-            const button = event.target;
-            button.textContent = isActive ? 'Show Lab' : 'Hide Lab';
-            
-            // Add visual feedback
-            button.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 150);
-        }
-        
-        function resetLab(labId) {
-            const labNumber = labId.slice(-1);
-            const output = document.getElementById(`output${labNumber}`);
-            const progress = document.getElementById(`progress${labNumber}`);
-            
-            // Reset state
-            if (labId === 'lab1') {
-                labState.lab1.isRunning = false;
-                labState.lab1.results = null;
-                // Reset sliders to default values
-                document.getElementById('contamination').value = 0.05;
-                document.getElementById('sample-size').value = 1000;
-                document.getElementById('noise-level').value = 10;
-                updateSliderValues();
-            } else if (labId === 'lab2') {
-                labState.lab2.isRunning = false;
-                labState.lab2.results = null;
-            }
-            
-            // Reset UI
-            if (output) output.innerHTML = '<span style="color: #6c757d;">Lab reset. Configure parameters and click "Run" to execute...</span>';
-            if (progress) progress.style.width = '0%';
-            
-            // Reset button text
-            const button = event.target;
-            button.textContent = 'Reset ✓';
-            setTimeout(() => {
-                button.textContent = 'Reset';
-            }, 1000);
-        }
-        
-        function switchTab(tabId, button) {
-            // Hide all tab contents in the same container
-            const container = button.closest('.tab-container');
-            const tabContents = container.querySelectorAll('.tab-content');
-            const tabButtons = container.querySelectorAll('.tab-btn');
-            
-            tabContents.forEach(content => content.classList.remove('active'));
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Show selected tab with animation
-            const targetTab = document.getElementById(tabId);
-            targetTab.classList.add('active');
-            button.classList.add('active');
-            
-            // Add visual feedback
-            button.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 150);
-        }
-        
-        function copyCode(codeId) {
-            const code = document.getElementById(codeId).textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                // Provide visual feedback
-                const button = event.target;
-                const originalText = button.textContent;
-                button.textContent = '✓ Copied!';
-                button.style.background = '#28a745';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '#007acc';
-                }, 2000);
-            }).catch(() => {
-                // Fallback for browsers without clipboard API
-                const textArea = document.createElement('textarea');
-                textArea.value = code;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                
-                const button = event.target;
-                button.textContent = '✓ Copied!';
-                setTimeout(() => {
-                    button.textContent = 'Copy';
-                }, 2000);
-            });
-        }
-        
-        function simulateRun(labId) {
-            const labNumber = labId.slice(-1);
-            const output = document.getElementById(`output${labNumber}`);
-            const progress = document.getElementById(`progress${labNumber}`);
-            
-            // Prevent multiple simultaneous runs
-            if (labState[labId].isRunning) {
-                output.innerHTML = '<span style="color: #ffc107;">⚠️ Lab is already running...</span>';
-                return;
-            }
-            
-            labState[labId].isRunning = true;
-            
-            // Get current parameters
-            let params = {};
-            if (labId === 'lab1') {
-                params = {
-                    contamination: parseFloat(document.getElementById('contamination').value),
-                    sampleSize: parseInt(document.getElementById('sample-size').value),
-                    noiseLevel: parseInt(document.getElementById('noise-level').value)
-                };
-            }
-            
-            // Real execution with progress
-            output.innerHTML = '<span style="color: #17a2b8;">🚀 Initializing execution...</span>';
-            progress.style.width = '0%';
-            
-            let progressValue = 0;
-            const interval = setInterval(() => {
-                progressValue += Math.random() * 15 + 5; // Variable progress speed
-                if (progressValue > 100) progressValue = 100;
-                progress.style.width = `${progressValue}%`;
-                
-                if (progressValue >= 20 && progressValue < 40) {
-                    output.innerHTML = '<span style="color: #ffc107;">📊 Generating sample data...</span>';
-                } else if (progressValue >= 40 && progressValue < 70) {
-                    output.innerHTML = '<span style="color: #6f42c1;">🧠 Training machine learning model...</span>';
-                } else if (progressValue >= 70 && progressValue < 90) {
-                    output.innerHTML = '<span style="color: #fd7e14;">📈 Analyzing results...</span>';
-                } else if (progressValue >= 90) {
-                    output.innerHTML = '<span style="color: #20c997;">🎯 Finalizing output...</span>';
-                }
-                
-                if (progressValue >= 100) {
-                    clearInterval(interval);
-                    executeRealAnalysis(labId, params);
-                }
-            }, 100);
-        }
-        
-        function executeRealAnalysis(labId, params) {
-            const labNumber = labId.slice(-1);
-            const output = document.getElementById(`output${labNumber}`);
-            
-            if (labId === 'lab1') {
-                // Real anomaly detection
-                const data = generateAnomalyData(params.sampleSize, params.contamination, params.noiseLevel);
-                const predictions = isolationForestDetection(data.values, params.contamination);
-                
-                // Calculate real metrics
-                const truePositives = data.anomalyIndices.filter(idx => predictions[idx] === 1).length;
-                const falsePositives = predictions.reduce((sum, pred, idx) => 
-                    sum + (pred === 1 && !data.anomalyIndices.includes(idx) ? 1 : 0), 0);
-                const falseNegatives = data.anomalyIndices.filter(idx => predictions[idx] === 0).length;
-                
-                const precision = truePositives / (truePositives + falsePositives) || 0;
-                const recall = truePositives / (truePositives + falseNegatives) || 0;
-                const f1Score = 2 * (precision * recall) / (precision + recall) || 0;
-                
-                labState.lab1.results = { precision, recall, f1Score, truePositives, falsePositives, falseNegatives };
-                
-                output.innerHTML = `
-<span style="color: #28a745;">✅ Real Anomaly Detection Completed!</span>
-
-<span style="color: #ffc107;">📊 Performance Metrics:</span>
-• Precision: ${precision.toFixed(3)}
-• Recall: ${recall.toFixed(3)}
-• F1-Score: ${f1Score.toFixed(3)}
-• True Positives: ${truePositives}
-• False Positives: ${falsePositives}
-• False Negatives: ${falseNegatives}
-
-<span style="color: #17a2b8;">🎯 Detection Summary:</span>
-• Total Samples: ${params.sampleSize}
-• Contamination Rate: ${params.contamination}
-• Predicted Anomalies: ${predictions.reduce((a, b) => a + b, 0)}
-• Actual Anomalies: ${data.anomalyIndices.length}
-
-<span style="color: #6f42c1;">⚙️ Algorithm Settings:</span>
-• Noise Level: ${params.noiseLevel}
-• Detection Threshold: Dynamic (Isolation Forest)
-• Processing Time: ${(Math.random() * 0.5 + 0.1).toFixed(2)}s
-
-<span style="color: #28a745;">💡 Optimization Suggestions:</span>
-${precision < 0.8 ? '• Increase contamination rate to reduce false positives' : '• Good precision - consider maintaining settings'}
-${recall < 0.8 ? '• Tune algorithm parameters to catch more anomalies' : '• Excellent recall performance'}
-${f1Score > 0.85 ? '• Outstanding F1-Score! Model is well-balanced' : '• Consider parameter tuning for better balance'}
-                `;
-            } else if (labId === 'lab2') {
-                // Real log analysis
-                const logs = generateLogData(500);
-                const analysis = extractLogPatterns(logs);
-                const clusters = clusterLogs(logs, 5);
-                
-                labState.lab2.results = { analysis, clusters, logs };
-                
-                const topPatterns = Object.entries(analysis.patterns)
-                    .sort(([,a], [,b]) => b - a)
-                    .slice(0, 5);
-                
-                const topErrors = Object.entries(analysis.errorPatterns)
-                    .sort(([,a], [,b]) => b - a)
-                    .slice(0, 3);
-                
-                output.innerHTML = `
-<span style="color: #28a745;">✅ Real Log Analysis Completed!</span>
-
-<span style="color: #ffc107;">📈 Pattern Analysis:</span>
-• Total Logs Processed: ${logs.length}
-• Unique Patterns: ${Object.keys(analysis.patterns).length}
-• Error Rate: ${((analysis.severityCounts.ERROR || 0) / logs.length * 100).toFixed(1)}%
-
-<span style="color: #dc3545;">🚨 Top Error Patterns:</span>
-${topErrors.map(([pattern, count]) => `• ${pattern.substring(0, 60)}... (${count}x)`).join('\n')}
-
-<span style="color: #17a2b8;">📊 Severity Distribution:</span>
-• INFO: ${analysis.severityCounts.INFO || 0} (${((analysis.severityCounts.INFO || 0) / logs.length * 100).toFixed(1)}%)
-• WARN: ${analysis.severityCounts.WARN || 0} (${((analysis.severityCounts.WARN || 0) / logs.length * 100).toFixed(1)}%)
-• ERROR: ${analysis.severityCounts.ERROR || 0} (${((analysis.severityCounts.ERROR || 0) / logs.length * 100).toFixed(1)}%)
-• DEBUG: ${analysis.severityCounts.DEBUG || 0} (${((analysis.severityCounts.DEBUG || 0) / logs.length * 100).toFixed(1)}%)
-
-<span style="color: #6f42c1;">🎯 Cluster Analysis:</span>
-${clusters.map(cluster => `• Cluster ${cluster.id}: ${cluster.size} logs`).join('\n')}
-
-<span style="color: #28a745;">🔍 Insights:</span>
-${analysis.severityCounts.ERROR > 50 ? '• High error rate detected - investigate immediately!' : '• Error rate within normal range'}
-• Most active pattern: ${topPatterns[0] ? topPatterns[0][0].substring(0, 50) + '...' : 'N/A'}
-• Clustering efficiency: ${(clusters.filter(c => c.size > 0).length / clusters.length * 100).toFixed(0)}%
-                `;
-            }
-            
-            labState[labId].isRunning = false;
-        }
-        
-        function loadResource(resourceId) {
-            // Create a modal-like experience
-            const existingModal = document.getElementById('resource-modal');
-            if (existingModal) {
-                existingModal.remove();
-            }
-            
-            const modal = document.createElement('div');
-            modal.id = 'resource-modal';
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.8);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 1000;
-            `;
-            
-            const content = document.createElement('div');
-            content.style.cssText = `
-                background: white;
-                padding: 30px;
-                border-radius: 15px;
-                max-width: 600px;
-                width: 90%;
-                max-height: 80%;
-                overflow-y: auto;
-                position: relative;
-            `;
-            
-            const resourceInfo = getResourceInfo(resourceId);
-            
-            content.innerHTML = `
-                <button onclick="document.getElementById('resource-modal').remove()" 
-                        style="position: absolute; top: 15px; right: 15px; background: #dc3545; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer;">×</button>
-                <h3 style="color: #333; margin-bottom: 20px;">${resourceInfo.title}</h3>
-                <p style="color: #666; margin-bottom: 20px;">${resourceInfo.description}</p>
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-                    <h4>Quick Start:</h4>
-                    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; overflow-x: auto;">${resourceInfo.quickStart}</pre>
-                </div>
-                <div style="margin-top: 20px;">
-                    <a href="${resourceInfo.documentation}" target="_blank" 
-                       style="background: #667eea; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; margin-right: 10px;">
-                       📚 Documentation
-                    </a>
-                    <a href="${resourceInfo.github}" target="_blank" 
-                       style="background: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px;">
-                       🐙 GitHub
-                    </a>
-                </div>
-            `;
-            
-            modal.appendChild(content);
-            document.body.appendChild(modal);
-            
-            // Add click outside to close
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.remove();
-                }
-            });
-        }
-        
-        function getResourceInfo(resourceId) {
-            const resources = {
-                'prometheus-anomaly': {
-                    title: 'Prometheus + Machine Learning',
-                    description: 'Implement automated anomaly detection using Prometheus metrics and machine learning algorithms.',
-                    quickStart: `# Install prometheus-anomaly-detector
-pip install prometheus-anomaly-detector
-
-# Basic setup
-from prometheus_anomaly_detector import AnomalyDetector
-detector = AnomalyDetector(metric_name='cpu_usage')
-detector.train(data)
-anomalies = detector.predict(new_data)`,
-                    documentation: 'https://prometheus.io/docs/',
-                    github: 'https://github.com/prometheus/prometheus'
-                },
-                'elastic-ml': {
-                    title: 'Elasticsearch Machine Learning',
-                    description: 'Use Elasticsearch built-in ML capabilities for real-time anomaly detection on log data.',
-                    quickStart: `# Enable ML on Elasticsearch cluster
-PUT _cluster/settings
-{
-  "persistent": {
-    "xpack.ml.enabled": true
-  }
-}
-
-# Create anomaly detection job
-POST _ml/anomaly_detectors/cpu-anomaly
-{
-  "analysis_config": {
-    "bucket_span": "10m",
-    "detectors": [{"function": "mean", "field_name": "cpu_percent"}]
-  }
-}`,
-                    documentation: 'https://www.elastic.co/guide/en/machine-learning/',
-                    github: 'https://github.com/elastic/elasticsearch'
-                },
-                'prophet-ts': {
-                    title: 'Facebook Prophet Forecasting',
-                    description: 'Time series forecasting tool designed for business metrics with strong seasonal effects.',
-                    quickStart: `# Install Prophet
-pip install prophet
-
-# Basic forecasting
-from prophet import Prophet
-import pandas as pd
-
-df = pd.DataFrame({'ds': dates, 'y': values})
-model = Prophet()
-model.fit(df)
-future = model.make_future_dataframe(periods=365)
-forecast = model.predict(future)`,
-                    documentation: 'https://facebook.github.io/prophet/',
-                    github: 'https://github.com/facebook/prophet'
-                },
-                'ansible-ml': {
-                    title: 'ML-Driven Ansible Playbooks',
-                    description: 'Automate infrastructure management using machine learning insights with Ansible.',
-                    quickStart: `# ansible-ml-playbook.yml
----
-- hosts: all
-  vars:
-    cpu_threshold: "{{ ml_predicted_threshold | default(80) }}"
-  tasks:
-    - name: Scale services based on ML predictions
-      docker_service:
-        name: "{{ item }}"
-        scale: "{{ predicted_scale[item] }}"
-      loop: "{{ services }}"`,
-                    documentation: 'https://docs.ansible.com/',
-                    github: 'https://github.com/ansible/ansible'
-                }
-            };
-            
-            return resources[resourceId] || {
-                title: 'Resource Not Found',
-                description: 'This resource is still being developed.',
-                quickStart: '# Coming soon...',
-                documentation: '#',
-                github: '#'
-            };
-        }
-        
-        function updateSliderValues() {
-            const sliders = ['contamination', 'sample-size', 'noise-level'];
-            sliders.forEach(id => {
-                const slider = document.getElementById(id);
-                const valueSpan = document.getElementById(id + '-value');
-                if (slider && valueSpan) {
-                    valueSpan.textContent = slider.value;
-                }
-            });
-        }
-        
-        // Initialize interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Setup range input listeners with real-time updates
-            const rangeInputs = document.querySelectorAll('input[type="range"]');
-            rangeInputs.forEach(input => {
-                const valueSpan = document.getElementById(input.id + '-value');
-                if (valueSpan) {
-                    input.addEventListener('input', function() {
-                        valueSpan.textContent = this.value;
-                        
-                        // Update lab state
-                        if (input.id === 'contamination') {
-                            labState.lab1.contamination = parseFloat(this.value);
-                        } else if (input.id === 'sample-size') {
-                            labState.lab1.sampleSize = parseInt(this.value);
-                        } else if (input.id === 'noise-level') {
-                            labState.lab1.noiseLevel = parseInt(this.value);
-                        }
-                        
-                        // Provide visual feedback
-                        valueSpan.style.color = '#667eea';
-                        setTimeout(() => {
-                            valueSpan.style.color = '#333';
-                        }, 300);
-                    });
-                }
-            });
-            
-            // Initialize all labs as collapsed
-            document.querySelectorAll('.lab-content').forEach(lab => {
-                lab.classList.remove('active');
-            });
-            
-            // Update toggle buttons text
-            document.querySelectorAll('[onclick^="toggleLab"]').forEach(btn => {
-                btn.textContent = 'Show Lab';
-            });
         });
     </script>
 </body>
